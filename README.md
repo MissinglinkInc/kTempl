@@ -7,6 +7,7 @@ by Keiya Chinen <keiya_21@yahoo.co.jp>
 ===============================================
 
 テンプレートはこんなかんじで。
+
 	&lt;script type='text/x-ktempl' id='templ'&gt;
 		&lt;p&gt;{name}は{age}才です&lt;/p&gt;
 	&lt;/script&gt;
