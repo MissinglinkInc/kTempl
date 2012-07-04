@@ -25,7 +25,7 @@ KTempl.prototype = {
 				idx +
 				this.options.syntaxClose
 			,'g');
-			string = string.replace(re, object[idx]);
+			string = string.replace(re, object[idx] ? object[idx] : '');
 		}
 		return string;
 	},
