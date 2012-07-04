@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ktempl</title>
+	<meta name="viewport" content="initial-scale=0.9, minimum-scale=0.9, maximum-scale=1.1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script src="http://cdn.keiyac.org/common/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="ktempl.js"></script>
+<style type='text/css'>
+pre {
+	border: 1px dotted #555;
+}
+.res {
+	border: 1px solid #ccc;
+}
+</style>
+</head>
+<body>
+<h1>ktempl template engine</h1>
+	<h2>普通のテンプレート</h2>
+	<h3>syntax</h3>
+	<pre>
+var tmpl1 = new KTempl({template:'templ'});
+
+var result = tmpl1.render({
+	name:'僕',
+	age:'1',
+});
+
+$('#result1').text(result);
+	</pre>
+	<h3>result</h3>
+	<div class='res' id='result1'></div>
+	<h2>イテレータ</h2>
+	<h3>syntax</h3>
+	<pre>
+var tmpl2 = new KTempl({template:'templ'});
+
+var result2 = tmpl2.render([
+{
+	name:'僕',
+	age:'5',
+},
+{
+	name:'あなた',
+	age:'12',
+},
+]);
+
+$('#result2').html(result2);
+	</pre>
+	<h3>result</h3>
+	<div class='res' id='result2'></div>
+
+	<script type='text/x-ktempl' id='templ'>
+<p>{name}は{age}才です</p>
+	</script>
+<script>
+var tmpl1 = new KTempl({template:'templ'});
+
+var result = tmpl1.render({
+	name:'僕',
+	age:'1',
+});
+
+$('#result1').text(result);
+
+var tmpl2 = new KTempl({template:'templ'});
+
+var result2 = tmpl2.render([
+{
+	name:'僕',
+	age:'5',
+},
+{
+	name:'あなた',
+	age:'12',
+},
+]);
+
+$('#result2').html(result2);
+</script>
+</body>
+</html>
