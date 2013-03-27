@@ -56,7 +56,7 @@ $('#result2').html(result2);
 	<div class='res' id='result2'></div>
 
 	<script type='text/x-ktempl' id='templ'>
-<p>{name}は{age}才です</p>
+      <p>{{name}}は{{age}}才です</p>
 	</script>
 <script>
 var tmpl1 = new KTempl({template:'templ'});
@@ -82,6 +82,8 @@ var result2 = tmpl2.render([
 ]);
 
 $('#result2').html(result2);
+/* strict mode test */
+var test = {a:123,b:231,a:123};
 </script>
 </body>
 </html>

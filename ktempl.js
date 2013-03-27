@@ -3,8 +3,8 @@
  * by Keiya Chinen <keiya_21@yahoo.co.jp>
  */
  
+"use strict";
 var KTempl = function (options) {
-	"use strict";
 	this._constructor(options);
 }
 
@@ -12,8 +12,8 @@ KTempl.prototype = {
 
 	_constructor : function(options) {
 	
-		options.syntaxOpen  = '{';
-		options.syntaxClose = '}';
+		options.syntaxOpen  = '{{';
+		options.syntaxClose = '}}';
 	
 		this.options = options;
 	},
